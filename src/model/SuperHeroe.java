@@ -1,7 +1,5 @@
 package model;
 
-import java.util.Iterator;
-
 public abstract class SuperHeroe {
 	
 	protected String nombre;
@@ -28,7 +26,7 @@ public abstract class SuperHeroe {
 	};
 	
 	public void setPoder(String poder, int position) {
-		if (position > poderes.length) {
+		if (position >= 0 && position < poderes.length) {
 			poderes[position] = poder;
 		}
 	};
